@@ -1,9 +1,9 @@
-console.log(mergeSort([1,2,5,4,14,12,2,22,222]))
+console.log(mergeSort([12, 15, -23, 4 , 6, 10, 35, 28]))
 
 function mergeSort(arr) {
     // base case
     if (arr.length < 2) return arr;
-    let mid = Math.floor(arr.length / 2);
+    let mid = Math.floor(arr.length /    2);
     let firstHalf = arr.slice(0, mid);
     let secondHalf = arr.slice(mid);
 
@@ -72,6 +72,7 @@ function merge(arr1, arr2) {
             merged.push(arr1[index1]);
             index1++;
     // otherwise its greater so push arr2 and advance arr 2 index..
+    // to point to the next item while the other pointer is still pointing at the first item of the second array
         } else {
             merged.push(arr2[index2]);
             index2++;
